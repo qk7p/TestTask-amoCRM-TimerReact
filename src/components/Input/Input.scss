@@ -1,0 +1,37 @@
+@import "../../styles/index";
+
+.Input {
+  @include roboto-16-regular;
+  border: 3px solid $color-input-border;
+  border-radius: 4px;
+  padding: 4px;
+  color: $color-text-primary;
+  width: 100px;
+  margin: 6px;
+
+  &:hover,
+  &:focus-visible,
+  &:active,
+  &:focus,
+  &:target {
+    border-color: $color-button-hover;
+    outline: transparent;
+  }
+
+  &__error {
+    border-color: $color-error;
+    &:hover,
+    &:focus-visible,
+    &:active,
+    &:focus,
+    &:target {
+      border-color: $color-error;
+      outline: transparent;
+    }
+  }
+
+  &ErrorText {
+    @include roboto-14-regular;
+    color: $color-error;
+  }
+}

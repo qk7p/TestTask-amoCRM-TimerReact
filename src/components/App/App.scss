@@ -1,0 +1,90 @@
+@import "../../styles/index";
+
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.App {
+  &Container {
+    min-height: 100vh;
+    margin: auto;
+    padding: 16px;
+    background-color: $color-background-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .AppTimerContainer {
+      margin: 8px;
+      padding: 8px;
+    }
+    .AppInputContainer {
+      width: auto;
+      margin: 8px;
+      padding: 8px;
+      display: grid;
+      grid-template-areas:
+        "A B"
+        "C C";
+      align-items: center;
+      justify-items: center;
+      .Input {
+        grid-area: A;
+        &ErrorText {
+          grid-area: C;
+        }
+      }
+      .TimerButton {
+        grid-area: B;
+        box-sizing: border-box;
+        width: 100px;
+        height: 35px;
+      }
+    }
+  }
+}

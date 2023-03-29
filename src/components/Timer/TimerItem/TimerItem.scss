@@ -1,0 +1,27 @@
+@import "../../../styles/index";
+
+.TimerItem {
+  color: $color-text-primary;
+  @include roboto-14-regular;
+  font-size: 40px;
+  
+
+  &-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  &-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms, transform 200ms;
+  }
+  &-exit {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  &-exit-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms, transform 200ms;
+  }
+}

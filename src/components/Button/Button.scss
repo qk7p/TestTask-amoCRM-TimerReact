@@ -1,0 +1,37 @@
+@import "../../styles/index";
+
+.Button {
+  $this: &;
+  width: max-content;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 6px;
+  border: none;
+  background-color: $color-button-primary;
+  color: white;
+  @include roboto-14-regular;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: $color-button-hover;
+  }
+  &:focus-within {
+    outline: transparent;
+    background-color: $color-button-hover;
+  }
+
+  &__disabled {
+    cursor: default;
+    background-color: $color-button-disabled;
+
+    &:hover,
+    &:focus-within,
+    &:focus-visible,
+    &:active,
+    &:focus,
+    &:target {
+      background-color: $color-button-disabled;
+      outline: transparent;
+    }
+  }
+}

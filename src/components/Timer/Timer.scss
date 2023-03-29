@@ -1,0 +1,49 @@
+@import "../../styles/index";
+
+.Timer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid $color-timer-border;
+  @include roboto-40-regular;
+  color: $color-text-primary;
+  cursor: default;
+
+  .Seconds {
+    &-enter {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    &-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 200ms, transform 200ms;
+    }
+  }
+  .Minutes {
+    &-enter {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    &-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 500ms, transform 500ms;
+    }
+  }
+  .Hours {
+    &-enter {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    &-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 1000ms, transform 1000ms;
+    }
+  }
+}
