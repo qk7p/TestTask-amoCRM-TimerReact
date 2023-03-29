@@ -1,5 +1,7 @@
 # TestTask-amoCRM-TimerReact
 
+Тестовое задание для компании amoCRM.
+
 Задача: 
 
 
